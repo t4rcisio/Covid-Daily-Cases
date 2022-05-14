@@ -23,11 +23,11 @@ class Database {
   }
 
   // Find and aggregate elements from database
-  async Aggregate(data) {
+  async GroupBy(data) {
     const response = { error: true, data: undefined };
 
     try {
-      response.data = await this.client.aggregate({
+      response.data = await this.client.groupBy({
         ...data,
       });
       response.error = false;
