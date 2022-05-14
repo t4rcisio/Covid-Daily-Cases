@@ -1,4 +1,4 @@
-import prisma from "./prisma";
+import prisma from "./prisma.js";
 
 class Database {
   // Generic class to connect to database
@@ -21,7 +21,6 @@ class Database {
     }
     return response;
   }
-
   // Find and aggregate elements from database
   async GroupBy(data) {
     const response = { error: true, data: undefined };
@@ -34,6 +33,8 @@ class Database {
     } catch (error) {
       response.error = true;
     }
+
+    //console.log(response);
     return response;
   }
 }
