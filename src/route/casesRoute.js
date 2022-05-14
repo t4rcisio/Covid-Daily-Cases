@@ -5,6 +5,6 @@ const router = Router();
 const client = new CasesController();
 
 router.get("/:date/count", client.getCount.bind(client));
-router.get("/:date/cumulative", client.getCumulative(client));
+router.get("/:date/cumulative", client.getCumulative.bind(client));
 
 export default router;
