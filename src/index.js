@@ -1,10 +1,10 @@
 import express from "express";
-import route from "./route/route";
+import Routes from "./route/route.js";
 
 const app = express();
 const port = 5000;
 
-app.use(route);
+app.use(Routes);
 
 app.get("/", (request, response) => {
   response.send("Backend Challenge 2021 🏅 - Covid Daily Cases");

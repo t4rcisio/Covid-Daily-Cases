@@ -1,8 +1,8 @@
 import Router from "express";
 import cases from "./casesRoute.js";
 
-const route = Router();
+const Routes = Router();
 
-route.use("/cases", cases);
+Routes.use("/cases", cases);
 
-export default route;
+export default Routes;
