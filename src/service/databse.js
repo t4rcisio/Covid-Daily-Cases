@@ -37,3 +37,5 @@ class Database {
     return response;
   }
 }
+
+export default Database;
