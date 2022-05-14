@@ -21,4 +21,19 @@ class Database {
     }
     return response;
   }
+
+  // Find and aggregate elements from database
+  async Aggregate(data) {
+    const response = { error: true, data: undefined };
+
+    try {
+      response.data = await this.client.aggregate({
+        ...data,
+      });
+      response.error = false;
+    } catch (error) {
+      response.error = true;
+    }
+    return response;
+  }
 }
