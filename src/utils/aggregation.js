@@ -46,4 +46,16 @@ const AggregationCumulative = (list, date) => {
   return dict;
 };
 
-export { AggregationCount, AggregationCumulative };
+const DateRefactor = (list) => {
+  // Refatora a data para o formato convencional
+  list.map((element) => {
+    // Converte para o formato de data
+    const date = new Date(element.date);
+    // Obtem apenas a parte yyyy-mm-dd da data
+    [element.date] = date.toISOString().split("T");
+  });
+
+  return list;
+};
+
+export { AggregationCount, AggregationCumulative, DateRefactor };
