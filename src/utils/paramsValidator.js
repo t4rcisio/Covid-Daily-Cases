@@ -9,7 +9,7 @@ const DateRules = () => {
 const DateValidation = (request, response, next) => {
   const errorRules = validationResult(request);
 
-  //If body params isn't match requirements
+  //Caso não esteja, para retorna para o cliente
   if (!errorRules.isEmpty())
     return response
       .status(422)
