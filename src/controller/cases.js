@@ -11,7 +11,7 @@ class CasesController extends Database {
 
   async getCount(request, response) {
     const { date } = request.params;
-    const nDate = new Date(date + " GMT-0000");
+    const nDate = new Date(date.toISOString().split("T") + " GMT-0000");
 
     //                          -> Search params
     //                          -> Agrupa os elementos pela localização do report e pela variante
@@ -27,6 +27,8 @@ class CasesController extends Database {
         location: "asc", //     -> Ordena em ordem alfabética
       },
     };
+
+    console.log({ ...params });
 
     const count = await super.GroupBy(params);
 
@@ -55,7 +57,7 @@ class CasesController extends Database {
 
   async getCumulative(request, response) {
     const { date } = request.params;
-    const nDate = new Date(date + " GMT-0000");
+    const nDate = new Date(date.toISOString().split("T") + " GMT-0000");
 
     //                          -> Search params
     //                          -> Agrupa os elementos pela localização do report e pela variante

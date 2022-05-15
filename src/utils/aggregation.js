@@ -16,9 +16,7 @@ const AggregationCount = (list, date) => {
     };
   }
 
-  const response = Object.values({ ...dict });
-
-  return response;
+  return Object.values({ ...dict });
 };
 
 const AggregationCumulative = (list, date) => {
@@ -45,9 +43,7 @@ const AggregationCumulative = (list, date) => {
     };
   }
 
-  const response = Object.values({ ...dict });
-
-  return response;
+  return Object.values({ ...dict });
 };
 
 const DateRefactor = (list) => {
