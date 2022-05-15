@@ -48,9 +48,9 @@ class CasesController extends Database {
     // Como os dados não estão totalmente agregados, então será preciso
     // fazê-lo. Usando a estrutura de dados "Dicionário", é possível
     // concluir a agregação facilmente.
-    const listFormated = AggregationCount(list, nDate);
+    const formatedList = AggregationCount(list, nDate);
 
-    return response.status(200).send({ ...listFormated });
+    return response.status(200).send(formatedList);
   }
 
   async getCumulative(request, response) {
@@ -92,9 +92,9 @@ class CasesController extends Database {
     // Como os dados não estão totalmente agregados, então será preciso
     // fazê-lo. Usando a estrutura de dados "Dicionário", é possível
     // concluir a agregação facilmente.
-    const listFormated = AggregationCumulative(list, nDate);
+    const formatedList = AggregationCumulative(list, nDate);
 
-    return response.status(200).send({ ...listFormated });
+    return response.status(200).send(formatedList);
   }
 }
 
