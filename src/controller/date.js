@@ -30,7 +30,7 @@ class DateController extends Database {
 
     // Converte o objeto em um array
     const list = Object.values({ ...count.data });
-    console.log(list);
+    //console.log(list);
     // Converte a data para um formato mais legível
     const formatedList = DateRefactor(list);
 

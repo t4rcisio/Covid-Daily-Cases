@@ -15,6 +15,7 @@ const DateValidation = (request, response, next) => {
       .status(422)
       .send({ message: "Date format must be yyyy-mm-dd on url params" });
 
+  console.log(request.params);
   //continue
   next();
 };
