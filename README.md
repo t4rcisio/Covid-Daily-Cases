@@ -73,6 +73,8 @@ Baixe o repositório: git clone https://github.com/t4rcisio/Covid-Daily-Cases.gi
 Na raíz do projeto crie um container: docker build . -t challenge/node-web-app
 Execute o projeto: docker run -p 3000:3000 -d  challenge/node-web-app
 
+Em tudo ocorrendo bem, basta acessar : http://localhost:5000
+
 ```
 
 
