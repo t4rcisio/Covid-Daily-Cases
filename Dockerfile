@@ -15,5 +15,7 @@ RUN yarn install
 COPY . .
 
 EXPOSE 3000
+RUN npx prisma generate
+RUN npx prisma db push
 
 CMD [ "yarn", "start" ]
