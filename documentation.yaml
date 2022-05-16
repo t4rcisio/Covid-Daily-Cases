@@ -1,22 +1,53 @@
 openapi: 3.0.0
 
+servers:
+  - url: https://daylicasesapi.herokuapp.com
+
 info:
-  version: 1.0
-  tittle: Covid Daily Cases  Challenge
+  version: 1.0.0
+  title: Covid Daily Cases  Challenge
 
 paths:
   /:
     get:
-      sumary: Rota raíz da api
-      response: 
-        200:
-          description: Retorna uma messagem sobre o Challenge
+      summary: "Home page from API"
+      responses:
+        "200":
+            description: "Backend Challenge 2021 🏅 - Covid Daily Cases"
 
   /cases/{date}/count:
     get:
-      sumary: Rota Listar todos os registros da base de dados no dia selecionado, agrupados por país e separados por variante da api
-        response: 
-          200:
-            description: Retorna uma lista com o resultado da busca
-
-
+      summary: "Agrupamento de dados por data, país e separados por variante"
+      parameters:
+      - name: "date"
+        in: "path"
+        description: "Date time on YYY-MM-DD format"
+        required: true
+        example: "2020-05-15"
+        schema:
+          type: "string"
+          format: "int32"
+      responses: 
+        "200":
+          description: "Retorna uma lista com o resultado da busca"
+  /cases/{date}/cumulative:
+    get:
+      summary: "retornando a soma dos casos registrados de acordo com a data selecionada, agrupados por país e separados por variante"
+      parameters:
+      - name: "date"
+        in: "path"
+        description: "Date time on YYY-MM-DD format"
+        required: true
+        example: "2020-05-15"
+        schema:
+          type: "string"
+          format: "int32"
+      responses: 
+        "200":
+          description: "Retorna uma lista com o resultado da busca"
+  /date:
+    get:
+      summary: "retornando uma lista com todas as datas com dados disponíveis"
+      responses: 
+        "200":
+          description: "Retorna uma lista com o resultado da busca"
