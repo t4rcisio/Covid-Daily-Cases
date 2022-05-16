@@ -8,8 +8,8 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(Routes);
 app.use(UpdateDatabase);
+app.use(Routes);
 
 app.get("/", (request, response) => {
   response.send("Backend Challenge 2021 🏅 - Covid Daily Cases");
