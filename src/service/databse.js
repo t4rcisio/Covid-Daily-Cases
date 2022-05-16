@@ -6,21 +6,6 @@ class Database {
     this.colletion = colletion;
     this.client = prisma[colletion];
   }
-
-  // Get elements array from database
-  async FindMany(data) {
-    const response = { error: true, data: undefined };
-
-    try {
-      response.data = await this.client.findMany({
-        ...data,
-      });
-      response.error = false;
-    } catch (error) {
-      response.error = true;
-    }
-    return response;
-  }
   // Find and aggregate elements from database
   async GroupBy(data) {
     const response = { error: true, data: undefined };
@@ -33,8 +18,6 @@ class Database {
     } catch (error) {
       response.error = true;
     }
-
-    //console.log(response);
     return response;
   }
 }

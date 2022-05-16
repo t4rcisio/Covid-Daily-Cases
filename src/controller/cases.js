@@ -28,8 +28,6 @@ class CasesController extends Database {
       },
     };
 
-    console.log({ ...params });
-
     const count = await super.GroupBy(params);
 
     if (count.error)
@@ -97,6 +95,21 @@ class CasesController extends Database {
     const formatedList = AggregationCumulative(list, nDate);
 
     return response.status(200).send(formatedList);
+  }
+
+  async Country(request, response) {
+    const { date, location } = request.params;
+    const nDate = new Date(date.toISOString().split("T") + " GMT-0000");
+
+    const params = {
+      where: {
+        id: "62819d3b9a44bfd277e76d7c",
+      },
+    };
+
+    const list = await super.FindMany(params);
+
+    response.send({ ...list });
   }
 }
 
