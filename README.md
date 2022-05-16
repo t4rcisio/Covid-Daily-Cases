@@ -2,7 +2,7 @@
 
 
 [Deploy da API](https://daylicasesapi.herokuapp.com) <br/>
-[Repositório da API auxiliar](https://kaggleapi.herokuapp.com)
+[Repositório da API auxiliar](https://github.com/t4rcisio/kaggle-api)
 
 ```
 
