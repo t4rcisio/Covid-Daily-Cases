@@ -66,6 +66,18 @@ Elsint
 
 ```
 
+##  Compilar o projeto
+
+```
+Baixe o repositório: git clone https://github.com/t4rcisio/Covid-Daily-Cases.git
+Na raíz do projeto crie um container: docker build . -t challenge/node-web-app
+Execute o projeto: docker run -p 3000:3000 -d  challenge/node-web-app
+
+```
+
+
+
+
 
 ## O ARQUIVO .ENV ESTÁ PREENCHIDO, MAS AS CREDENCIAIS SÃO TEMPORÁRIAS
 By coodesh
