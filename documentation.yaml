@@ -1,0 +1,22 @@
+openapi: 3.0.0
+
+info:
+  version: 1.0
+  tittle: Covid Daily Cases  Challenge
+
+paths:
+  /:
+    get:
+      sumary: Rota raíz da api
+      response: 
+        200:
+          description: Retorna uma messagem sobre o Challenge
+
+  /cases/{date}/count:
+    get:
+      sumary: Rota Listar todos os registros da base de dados no dia selecionado, agrupados por país e separados por variante da api
+        response: 
+          200:
+            description: Retorna uma lista com o resultado da busca
+
+
