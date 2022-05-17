@@ -3,7 +3,7 @@
 
 [Deploy da API](https://daylicasesapi.herokuapp.com) <br/>
 [Repositório da API auxiliar](https://github.com/t4rcisio/kaggle-api)
-
+[Apresentação em vídeo](https://www.loom.com/share/4756f66e270d4403b025ed551556255d)
 ```
 
 Esse repositório faz parte do Challenge Covid Daily Cases.
